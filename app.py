@@ -8,5 +8,10 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/three')
+def three():
+    return render_template('three.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
