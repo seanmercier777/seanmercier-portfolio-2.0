@@ -1,0 +1,55 @@
+.sticky-container {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+
+  /* background-color: #e6f0f0; */
+  top: 0;
+  z-index: 1000; /* Ensures it stays above other content */
+}
+
+/* main {
+  background-color: #ffffff;
+} */
+
+.nav {
+  position: absolute;
+  top: 10;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+body {
+  background-color: #e6f0f0;
+}
+
+/* .container {
+  background-color: #e6f0f0;
+} */
+
+.bg-custom {
+  background-color: #4c82af !important;
+}
+
+.hero-container {
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem; /* Make the heading larger */
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.5rem; /* Larger paragraph text */
+  margin-top: 20px;
+  color: #6c757d; /* Muted text color */
+}

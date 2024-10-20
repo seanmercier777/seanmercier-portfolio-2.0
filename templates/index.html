@@ -1,23 +1,343 @@
 {% extends "base.html" %} {% block content %}
 
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
-    </ul>
-  </div>
-</nav>
-
-<section class="hero">
-  <h1>Hi, I'm Sean Mercier</h1>
-  <p>A software engineer specialized in building awesome web applications.</p>
-</section>
-
-<div class="parallax-container">
-  <div class="parallax"><img src="images/parallax1.jpg" /></div>
+<div class="container pt-2 dark sticky-container">
+  <ul
+    class="nav nav-pills nav-fill gap-2 p-1 small bg-custom rounded-5 shadow-sm"
+    id="pillNav2"
+    role="tablist"
+    style="
+      --bs-nav-link-color: var(--bs-white);
+      --bs-nav-pills-link-active-color: var(--bs-custom);
+      --bs-nav-pills-link-active-bg: var(--bs-white);
+    "
+  >
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active rounded-5 snap-button"
+        id="home-tab2"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="true"
+        data-target="#portfolio"
+      >
+        Portfolio
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link rounded-5 snap-button"
+        id="profile-tab2"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        data-target="#skills"
+      >
+        Skills
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link rounded-5 snap-button"
+        id="profile-tab2"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        data-target="#experience"
+      >
+        Experience
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link rounded-5 snap-button"
+        id="contact-tab2"
+        data-bs-toggle="tab"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        data-target="#education"
+      >
+        Education
+      </button>
+    </li>
+  </ul>
 </div>
+
+<div
+  class="container-fluid p-5 text-center bg-light hero-container"
+  id="portfolio"
+>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <section class="hero">
+        <h1>Hi, I'm Sean Mercier</h1>
+        <p>
+          A software engineer specialized in building awesome web applications.
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div class="container p-5 text-center" id="skills">
+  <section class="hero">
+    <h1>Skills</h1>
+    <p>
+      <strong>Languages:</strong>
+      <br />
+      <i class="devicon-python-plain colored"></i> Python,
+      <i class="devicon-csharp-plain colored"></i> C#,
+      <i class="devicon-java-plain colored"></i> Java,
+      <i class="devicon-mongodb-plain colored"></i> MongoDB,
+      <i class="fas fa-database"></i> SQL <br />
+
+      <br />
+
+      <strong>Frameworks:</strong>
+      <br />
+      <i class="devicon-flask-plain colored"></i> Flask,
+      <i class="fas fa-cube"></i> Entity ORM,
+      <i class="fab fa-js-square"></i> JQuery,
+      <i class="devicon-vuejs-plain colored"></i> Vue.js <br />
+
+      <br />
+
+      <strong>Cloud/DevOps:</strong>
+      <br />
+      <i class="fab fa-aws"></i> AWS (CodeCommit, Lambda, ECS),
+      <i class="devicon-docker-plain colored"></i> Docker,
+      <i class="devicon-kubernetes-plain colored"></i> Kubernetes,
+      <i class="fas fa-cloud"></i> DigitalOcean
+
+      <br />
+    </p>
+  </section>
+</div>
+
+<!-- <div class="container p-5 text-center" id="skills">
+  <section class="hero">
+    <h1>Skills</h1>
+    <p>
+      <strong>Languages:</strong> Python, C#, Java, MongoDB, SQL <br />
+      <strong>Frameworks:</strong> Flask, Entity ORM, JQuery, Vue.js <br />
+      <strong>Cloud/DevOps:</strong> AWS (CodeCommit, Lambda, ECS), Docker,
+      Kubernetes, DigitalOcean
+    </p>
+  </section>
+</div> -->
+
+<div class="container p-5 text-center" id="experience">
+  <section class="hero">
+    <h1>Experience</h1>
+    <h2>
+      Senior Software Engineer, Connexus Credit Union – Remote Aug 2021 –
+      Present
+    </h2>
+    <ul class="text-start">
+      <li>
+        Led full-stack feature development of internal Institutional Lending
+        applications using AWS Lambda, Python, Flask, Sanic, C# ASP.NET, SQL,
+        and DocDB
+      </li>
+      <li>
+        Architected and implemented a SOAP API wrapper using FastAPI to automate
+        membership creation during loan onboarding, significantly reducing
+        rejection rates and processing time
+      </li>
+      <li>
+        Designed and deployed microservices in Python and Kubernetes for
+        automating loan collateral releases, integrating with Snowflake to
+        streamline workflows and eliminate manual steps
+      </li>
+      <li>
+        Refactored and migrated legacy applications from an Apache NiFi cluster
+        to AWS, replacing workflows with Python-based Lambda functions to
+        improve performance and scalability
+      </li>
+      <li>
+        Drafted architecture for a Loan Sale and Remittance application
+        microservice in AWS
+      </li>
+    </ul>
+    <h2>
+      Software Engineer, Skyward Inc. – Stevens Point, WI Jan 2016 – Aug 2021
+    </h2>
+    <ul class="text-start">
+      <li>
+        Developed and maintained financial reporting systems using C# and SQL,
+        focusing on scalability and maintainability
+      </li>
+      <li>
+        Conducted code reviews and mentored junior engineers, emphasizing
+        performance optimization
+      </li>
+      <li>
+        Enhanced system reliability by implementing unit tests at the function
+        level
+      </li>
+      <li>
+        Established performance standards for State Reporting systems and
+        collaborated with customers on system design and maintenance requests
+      </li>
+      <li>
+        Maintained high-performance mass processes for users to perform state
+        reporting maintenance on their data
+      </li>
+      <li>
+        Automated software testing processes in C# using Selenium, increasing
+        testing frequency and consistency
+      </li>
+      <li>
+        Documented test procedures and software defects, ensuring compliance
+        with company standards
+      </li>
+    </ul>
+  </section>
+</div>
+
+<div class="container p-5 text-center" id="projects">
+  <section class="hero">
+    <h1>Projects</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><strong>Joyful Color AI</strong></h5>
+
+            <ul class="text-start">
+              <li>
+                <p class="card-text">
+                  Built a Flask-based website to generate coloring book pages
+                  using pretrained models from Hugging Face.
+                </p>
+              </li>
+              <li>
+                <p class="card-text">
+                  Integrated Auth0 and Stripe for user authentication and
+                  payments.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">
+              <strong>Daily Bread AI</strong>
+              <span class="text-muted">(Defunct)</span>
+            </h5>
+            <ul class="text-start">
+              <li>
+                <p class="card-text">
+                  Developed a Flask and serverless architecture that sent daily
+                  SMS messages with AI-generated motivational images and quotes.
+                </p>
+              </li>
+              <li>
+                <p class="card-text">
+                  Integrated Twilio API for message delivery and automated user
+                  management.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- <div class="container p-5 text-center" id="projects">
+  <section class="hero">
+    <h1>Projects</h1>
+    <ul class="text-start">
+      <li>
+        <strong>Joyful Color AI</strong> – Built a Flask-based website to
+        generate coloring book pages using pretrained models from Hugging Face.
+        Integrated Auth0 and Stripe for user authentication and payments.
+      </li>
+      <li>
+        <strong>Daily Bread AI</strong> (Defunct) – Developed a Flask and
+        serverless architecture that sent daily SMS messages with AI-generated
+        motivational images and quotes. Integrated Twilio API for message
+        delivery and automated user management.
+      </li>
+    </ul>
+  </section>
+</div> -->
+
+<div class="container p-5 text-center" id="education">
+  <section class="hero">
+    <h1>Education</h1>
+    <div class="row justify-content-center">
+      <!-- Card 1: Arizona State University -->
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">
+              <strong>Arizona State University</strong>
+            </h5>
+            <p class="card-text">
+              MCS Master of Computer Science <br />(Expected Dec 2026)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: University of Wisconsin – Oshkosh -->
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">
+              <strong>University of Wisconsin – Oshkosh</strong>
+            </h5>
+            <p class="card-text">
+              BS in Computer Science; Minor: Philosophy <br />(Jan 2016)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- <div class="container p-5 text-center" id="section4">
+  <section class="hero">
+    <h1>Education</h1>
+    <p>
+      <strong>Arizona State University</strong> – MCS Master of Computer Science
+      (Expected Dec 2026)<br />
+      <strong>University of Wisconsin – Oshkosh</strong> – BS in Computer
+      Science w/ Minor in Philosophy (Jan 2016)
+    </p>
+  </section>
+</div> -->
+
+<script>
+  // Get all the buttons that trigger the snapping
+  const buttons = document.querySelectorAll(".snap-button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Find the target section using the data-target attribute
+      const targetId = button.getAttribute("data-target");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        // Scroll to the corresponding section
+        targetSection.scrollIntoView({
+          behavior: "smooth", // Optional: for smooth scrolling
+          block: "start", // Optional: align to the top of the section
+        });
+      }
+    });
+  });
+</script>
 
 {% endblock %}
